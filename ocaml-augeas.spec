@@ -6,8 +6,9 @@ Version:	0.4
 Release:	1
 License:	LGPL v2+
 Group:		Libraries
-Source0:	http://augeas.net/download/ocaml/%{name}-%{version}.tar.gz
+Source0:	http://download.augeas.net/ocaml/%{name}-%{version}.tar.gz
 # Source0-md5:	c18c3c794e945336acda222046f8416b
+URL:		http://augeas.net/
 BuildRequires:	augeas-devel
 BuildRequires:	ocaml >= 3.04-7
 BuildRequires:	ocaml-findlib
