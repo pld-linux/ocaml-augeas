@@ -1,0 +1,10 @@
+--- ocaml-augeas-0.4/configure.ac.orig	2008-05-07 09:33:05.000000000 +0200
++++ ocaml-augeas-0.4/configure.ac	2015-07-18 22:07:48.833074482 +0200
+@@ -41,6 +41,7 @@
+ AC_CHECK_LIB(augeas,aug_init,
+ 	[],
+ 	AC_MSG_ERROR([You must install the Augeas library]))
++CFLAGS="$CFLAGS $(pkg-config --cflags augeas)"
+ AC_CHECK_HEADER([augeas.h],
+ 	[],
+ 	AC_MSG_ERROR([You must install the Augeas development package]))
