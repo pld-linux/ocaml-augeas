@@ -16,6 +16,7 @@ Group:		Libraries
 Source0:	http://download.augeas.net/ocaml/%{name}-%{version}.tar.gz
 # Source0-md5:	c18c3c794e945336acda222046f8416b
 Patch0:		%{name}-cflags.patch
+Patch1:		%{name}-no-ocamlopt.patch
 URL:		http://augeas.net/
 BuildRequires:	augeas-devel
 BuildRequires:	autoconf
@@ -51,6 +52,7 @@ biblioteki augeas.
 %prep
 %setup -q
 %patch0 -p1
+%{!?with_ocaml_opt:%patch1 -p1}
 
 %build
 %{__autoconf}

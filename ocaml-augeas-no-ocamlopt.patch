@@ -1,0 +1,11 @@
+--- ocaml-augeas-0.4/Makefile.in.orig	2008-05-07 09:47:45.000000000 +0200
++++ ocaml-augeas-0.4/Makefile.in	2015-07-18 23:15:17.806238006 +0200
+@@ -39,7 +39,7 @@
+ 
+ export LIBRARY_PATH = .
+ 
+-all:	mlaugeas.cma mlaugeas.cmxa test_augeas
++all:	mlaugeas.cma test_augeas
+ 
+ mlaugeas.cma: augeas_c.o augeas.cmo
+ 	ocamlmklib $(LDFLAGS) $(LIBS) -o mlaugeas $^
