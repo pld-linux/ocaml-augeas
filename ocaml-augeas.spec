@@ -10,7 +10,7 @@ Summary:	Augeas binding for OCaml
 Summary(pl.UTF-8):	Wiązania augeasa dla OCamla
 Name:		ocaml-augeas
 Version:	0.4
-Release:	1
+Release:	2
 License:	LGPL v2+
 Group:		Libraries
 Source0:	http://download.augeas.net/ocaml/%{name}-%{version}.tar.gz
