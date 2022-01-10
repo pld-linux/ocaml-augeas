@@ -36,7 +36,7 @@ używających biblioteki augeas.
 
 %package devel
 Summary:	Augeas binding for OCaml - development part
-Summary(pl.UTF-8):	Wiązania augeasa dla OCamla - cześć programistyczna
+Summary(pl.UTF-8):	Wiązania augeasa dla OCamla - część programistyczna
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 %requires_eq	ocaml
