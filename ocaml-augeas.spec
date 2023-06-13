@@ -71,7 +71,7 @@ install augeas.cmi libmlaugeas.a mlaugeas.cma $RPM_BUILD_ROOT%{_libdir}/ocaml/au
 install augeas.cmx mlaugeas.{a,cmxa} $RPM_BUILD_ROOT%{_libdir}/ocaml/augeas
 %endif
 install dllmlaugeas.so $RPM_BUILD_ROOT%{_libdir}/ocaml/stublibs
-install -D META $RPM_BUILD_ROOT%{_libdir}/ocaml/site-lib/augeas/META
+install -D META $RPM_BUILD_ROOT%{_libdir}/ocaml/augeas/META
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -84,6 +84,7 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc augeas.mli
 %dir %{_libdir}/ocaml/augeas
+%{_libdir}/ocaml/augeas/META
 %{_libdir}/ocaml/augeas/augeas.cmi
 %{_libdir}/ocaml/augeas/libmlaugeas.a
 %{_libdir}/ocaml/augeas/mlaugeas.cma
@@ -92,4 +93,3 @@ rm -rf $RPM_BUILD_ROOT
 %{_libdir}/ocaml/augeas/mlaugeas.a
 %{_libdir}/ocaml/augeas/mlaugeas.cmxa
 %endif
-%{_libdir}/ocaml/site-lib/augeas
