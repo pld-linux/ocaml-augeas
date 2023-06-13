@@ -9,17 +9,18 @@
 Summary:	Augeas binding for OCaml
 Summary(pl.UTF-8):	Wiązania augeasa dla OCamla
 Name:		ocaml-augeas
-Version:	0.4
-Release:	3
+Version:	0.6
+Release:	1
 License:	LGPL v2+
 Group:		Libraries
-Source0:	http://download.augeas.net/ocaml/%{name}-%{version}.tar.gz
-# Source0-md5:	c18c3c794e945336acda222046f8416b
-Patch0:		%{name}-cflags.patch
-Patch1:		%{name}-no-ocamlopt.patch
+Source0:	http://people.redhat.com/~rjones/augeas/files/%{name}-%{version}.tar.gz
+# Source0-md5:	16837f2caf4764e46068a58e5b9d6c9b
+Patch0:		%{name}-no-ocamlopt.patch
+Patch1:		ocaml-4.09.patch
 URL:		http://augeas.net/
-BuildRequires:	augeas-devel
+BuildRequires:	augeas-devel >= 1.2.0
 BuildRequires:	autoconf
+BuildRequires:	libxml2-devel
 BuildRequires:	ocaml >= 3.04-7
 BuildRequires:	ocaml-findlib
 BuildRequires:	pkgconfig
@@ -51,8 +52,8 @@ biblioteki augeas.
 
 %prep
 %setup -q
-%patch0 -p1
-%{!?with_ocaml_opt:%patch1 -p1}
+%{!?with_ocaml_opt:%patch0 -p1}
+%patch1 -p1
 
 %build
 %{__autoconf}

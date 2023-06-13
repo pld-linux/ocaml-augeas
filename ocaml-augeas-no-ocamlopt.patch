@@ -7,5 +7,5 @@
 -all:	mlaugeas.cma mlaugeas.cmxa test_augeas
 +all:	mlaugeas.cma test_augeas
  
- mlaugeas.cma: augeas_c.o augeas.cmo
+ mlaugeas.cma: augeas-c.o augeas.cmo
  	ocamlmklib $(LDFLAGS) $(LIBS) -o mlaugeas $^
