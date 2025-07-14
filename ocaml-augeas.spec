@@ -53,7 +53,7 @@ biblioteki augeas.
 %prep
 %setup -q
 %{!?with_ocaml_opt:%patch0 -p1}
-%patch1 -p1
+%patch -P1 -p1
 
 %build
 %{__autoconf}
