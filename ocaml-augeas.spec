@@ -3,7 +3,7 @@
 # Conditional build:
 %bcond_without	ocaml_opt	# skip building native optimized binaries (bytecode is always built)
 
-%ifnarch %{ix86} %{x8664} arm aarch64 ppc sparc sparcv9
+%ifnarch %{ix86} %{x8664} %{arm} aarch64 ppc sparc sparcv9
 %undefine	with_ocaml_opt
 %endif
 Summary:	Augeas binding for OCaml
@@ -52,7 +52,7 @@ biblioteki augeas.
 
 %prep
 %setup -q
-%{!?with_ocaml_opt:%patch0 -p1}
+%{!?with_ocaml_opt:%patch -P0 -p1}
 %patch -P1 -p1
 
 %build
